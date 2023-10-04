@@ -1,8 +1,10 @@
+import Age from "./Age";
+
 const Welcome = ({name, age}) => {
   return (
     <>
       <p>Welcome {name}</p>
-      <p>You are {age} years old</p>
+      <Age age={age}/>
     </>
   )
 }
