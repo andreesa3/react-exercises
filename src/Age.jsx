@@ -1,7 +1,11 @@
 const Age = ({age}) => {
   return (
     <>
-      <p>You are {age} years old</p>
+      {
+        age > 18 ? 
+        (<p>You are {age} years old</p>) :
+        (<p>You are very young!</p>)
+      }
     </>
   )
 }
