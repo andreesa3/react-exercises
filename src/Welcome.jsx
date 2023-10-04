@@ -1,7 +1,7 @@
 const Welcome = ({name, age}) => {
   return (
     <>
-      <h1>Welcome {name}</h1>
+      <p>Welcome {name}</p>
       <p>You are {age} years old</p>
     </>
   )
