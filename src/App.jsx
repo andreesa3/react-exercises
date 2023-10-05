@@ -2,11 +2,12 @@ import { useState } from 'react'
 
 function App() {
 
-  const name = <h1>Andrea</h1>
+  const sayHello = (name) => name;
+  const jsxExpression = <h1>Andrea</h1>
 
   return (
     <>
-      {name}
+      {sayHello(jsxExpression)}
     </>
   )
 }
