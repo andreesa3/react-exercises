@@ -1,9 +1,11 @@
 import Welcome from "./Welcome";
 
+const name = <strong>Marco</strong>;
+
 const App = () => {
   return (
     <>
-      <Welcome name={<strong>Marco</strong>} age={21}/>
+      <Welcome name={name} age={21}/>
     </>
   )
 }
