@@ -4,7 +4,16 @@ const Counter = () => {
   const [counter, setCounter] = useState(0);
 
   const addOne = () => {
-    setCounter(counter + 1)
+    // Inseriamo un valore immediato se vogliamo fare un'operazione semplice come addizione, sottrazione, ecc...
+    // setCounter(counter + 1)
+    // Usiamo la funzione quando vogliamo fare delle operazioni più complesse
+    // setCounter(counter => {
+    //   if (counter < 10) {
+    //     return counter + 1;
+    //   } else {
+    //     return counter = 0;
+    //   }
+    // })
   }
 
   return (
