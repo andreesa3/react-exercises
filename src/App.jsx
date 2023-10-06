@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 function App() {
 
   // The sayHello function expects a 'name' parameter, but if it's not provided,
