@@ -1,4 +1,4 @@
-function App() {
+function AlertClock() {
   const currentDate = () => {
     alert(new Date().toLocaleTimeString());
   }
@@ -10,4 +10,4 @@ function App() {
   )
 }
 
-export default App
+export default AlertClock;
