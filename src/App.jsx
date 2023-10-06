@@ -1,9 +1,7 @@
-import AlertClock from "./AlertClock";
-
-const App = () => {
+const App = ({event}) => {
   return (
     <>
-      <AlertClock />
+      <button onClick={event}>Click</button>
     </>
   )
 }
