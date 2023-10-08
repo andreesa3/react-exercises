@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MouseClicker from './MouseClicker'; 
+import MultiButton from './MultiButton'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MouseClicker />
+    <MultiButton />
   </React.StrictMode>
 )
