@@ -8,9 +8,13 @@ export default function Counter() {
   }
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       currentTime()
     }, 1000)
+
+    return () => {
+      clearInterval(interval);
+    }
   }, [])
 
   return (
