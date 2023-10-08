@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MultiButton from './MultiButton'; 
+import App from './App'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <MultiButton />
+    <App />
   </React.StrictMode>
 )
