@@ -1,3 +1,5 @@
+import btnImage from './icons/black-next.svg'
+
 export default function Counter() {
   const printName = (e) => {
     console.log(e.currentTarget.name);
@@ -6,7 +8,7 @@ export default function Counter() {
   return (
     <>
       <button name="one" onClick={printName}>
-        <img src="" width={50} height={30}/>
+        <img src={btnImage} width={50} height={30}/>
       </button>
     </>
   )
