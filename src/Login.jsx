@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Login() {
+const Login = ({ event }) => {
   const [data, setData] = useState({
     username: '',
     password: '',
@@ -14,7 +14,7 @@ export default function Login() {
 
     setData(d => {
       return {
-        ...d, 
+        ...d,
         [name]: value
       }
     })
@@ -31,20 +31,17 @@ export default function Login() {
     });
   }
 
-  const handleInputSubmit = (e) => {
-    e.preventDefault();
-    console.log('data', data)
-  }
-
   return (
     <>
-    <form onSubmit={handleInputSubmit}>
-      <input type="text" name="username" value={data.username} onChange={handleInputChange} />
-      <input type="password" name="password" value={data.password} onChange={handleInputChange} />
-      <input type="checkbox" name="remember" value={data.remember} onChange={handleInputChange} />
-      <button>Submit</button>
-      <button onClick={handleResetForm}>Reset</button>
-    </form>
+      <form>
+        <input type="text" name="username" value={data.username} onChange={handleInputChange} />
+        <input type="password" name="password" value={data.password} onChange={handleInputChange} />
+        <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
+        <button disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false} onClick={event}>Submit</button>
+        <button onClick={handleResetForm}>Reset</button>
+      </form>
     </>
   )
 }
+
+export default Login;
