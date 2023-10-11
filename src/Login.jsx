@@ -42,7 +42,7 @@ export default function Login() {
     <form onSubmit={handleInputSubmit}>
       <input type="text" name="username" value={data.username} onChange={handleInputChange} />
       <input type="password" name="password" value={data.password} onChange={handleInputChange} />
-      <input type="checkbox" name="remember" value={data.remember} onChange={handleInputChange} />
+      <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
       <button>Submit</button>
       <button onClick={handleResetForm}>Reset</button>
     </form>
