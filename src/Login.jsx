@@ -21,15 +21,15 @@ const Login = ({ event }) => {
 
   }
 
-  const handleResetForm = (e) => {
-    e.preventDefault();
+  // const handleResetForm = (e) => {
+  //   e.preventDefault();
 
-    setData({
-      username: '',
-      password: '',
-      remember: false
-    });
-  }
+  //   setData({
+  //     username: '',
+  //     password: '',
+  //     remember: false
+  //   });
+  // }
 
   return (
     <>
@@ -38,7 +38,7 @@ const Login = ({ event }) => {
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
         <button disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false} onClick={(e) => event(e, data)}>Submit</button>
-        <button onClick={handleResetForm}>Reset</button>
+{/*         <button onClick={handleResetForm}>Reset</button> */}
       </form>
     </>
   )
