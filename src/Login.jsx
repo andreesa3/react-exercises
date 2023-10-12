@@ -11,7 +11,6 @@ const Login = ({ event }) => {
     const name = e.target.name;
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
 
-
     setData(d => {
       return {
         ...d,
