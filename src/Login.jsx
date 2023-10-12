@@ -33,11 +33,11 @@ const Login = ({ event }) => {
 
   return (
     <>
-      <form>
+      <form onSubmit={(e) => event(e, data)}>
         <input type="text" name="username" value={data.username} onChange={handleInputChange} />
         <input type="password" name="password" value={data.password} onChange={handleInputChange} />
         <input type="checkbox" name="remember" checked={data.remember} onChange={handleInputChange} />
-        <button disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false} onClick={(e) => event(e, data)}>Submit</button>
+        <button disabled={data.username.length <= 0 || data.password.length <= 0 ? true : false}>Submit</button>
         <button onClick={handleResetForm}>Reset</button>
       </form>
     </>
