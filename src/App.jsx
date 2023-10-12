@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Login from "./Login"
 
 const App = () => {
-  const onLogin = () => {
+
+  const onLogin = (e, data) => {
+    e.preventDefault();
     console.log('data', data)
   }
 
