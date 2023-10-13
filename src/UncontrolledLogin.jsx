@@ -2,14 +2,23 @@ const UncontrolledLogin = () => {
   const handleFormData = (e) => {
     e.preventDefault();
     
-    const username = e.target.elements.namedItem('username').value;
-    const password = e.target.elements.namedItem('password').value;
-    const remember = e.target.elements.namedItem('remember').checked;
+    // const username = e.target.elements.namedItem('username').value;
+    // const password = e.target.elements.namedItem('password').value;
+    // const remember = e.target.elements.namedItem('remember').checked;
 
+    // const data = {
+    //   username,
+    //   password,
+    //   remember
+    // }
+
+
+    const formData = new FormData(e.target)
+    
     const data = {
-      username,
-      password,
-      remember
+      username: formData.get('username'),
+      password: formData.get('password'),
+      remember: formData.get('remember') === "on" ? true : false
     }
 
     console.log(data);
