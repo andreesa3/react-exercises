@@ -1,24 +1,29 @@
 const UncontrolledLogin = () => {
   const handleFormData = (e) => {
     e.preventDefault();
-    
+
     // const username = e.target.elements.namedItem('username').value;
     // const password = e.target.elements.namedItem('password').value;
     // const remember = e.target.elements.namedItem('remember').checked;
 
 
-    // Non consigliata
-    const username = e.target.username.value;
-    const password = e.target.password.value;
-    const remember = e.target.remember.checked;
+    // VANTAGGI 
 
+    /*  1. Semplifica l'accesso ai valori del form. */
+    const formData = new FormData(e.target);
+
+    /*  2. Distingue i tipi di input in maniera autonoma senza dover specificare */
     const data = {
-      username,
-      password,
-      remember
+      username: formData.get('username'),
+      password: formData.get('password'),
+      remember: formData.get('remember') === 'on' ? true : false
     }
 
-    console.log(data);
+    // Svantaggi:
+
+    /* 1. Potrebbe essere incompatibile con versioni piû vecchie di browser */
+    /* 2. Potrebbe dare problemi con form di grandi dimensioni */
+      console.log(data);
   }
 
   return (
