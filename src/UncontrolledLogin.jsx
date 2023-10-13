@@ -6,19 +6,16 @@ const UncontrolledLogin = () => {
     // const password = e.target.elements.namedItem('password').value;
     // const remember = e.target.elements.namedItem('remember').checked;
 
-    // const data = {
-    //   username,
-    //   password,
-    //   remember
-    // }
 
+    // Non consigliata
+    const username = e.target.username.value;
+    const password = e.target.password.value;
+    const remember = e.target.remember.checked;
 
-    const formData = new FormData(e.target)
-    
     const data = {
-      username: formData.get('username'),
-      password: formData.get('password'),
-      remember: formData.get('remember') === "on" ? true : false
+      username,
+      password,
+      remember
     }
 
     console.log(data);
