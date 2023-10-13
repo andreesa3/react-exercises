@@ -1,4 +1,5 @@
 import Login from "./Login"
+import UncontrolledLogin from "./UncontrolledLogin"
 
 const App = () => {
   const onLogin = (e, data) => {
@@ -9,6 +10,7 @@ const App = () => {
   return (
     <>
       <Login event={onLogin} />
+      <UncontrolledLogin />
     </>
   )
 }
