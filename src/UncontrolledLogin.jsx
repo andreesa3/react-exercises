@@ -8,6 +8,9 @@ const UncontrolledLogin = () => {
     // const remember = e.target.elements.namedItem('remember').checked;
     
     // Non standard
+    // Anche useRef e useForm
+
+
     // const username = e.target.username.value;
     // const password = e.target.password.value;
     // const remember = e.target.remember.checked;
