@@ -1,13 +1,7 @@
 const UncontrolledLogin = () => {
   const handleFormData = (e) => {
     e.preventDefault();
-    
-    // const username = e.target.elements.namedItem('username').value;
-    // const password = e.target.elements.namedItem('password').value;
-    // const remember = e.target.elements.namedItem('remember').checked;
 
-
-    // Non consigliata
     const username = e.target.username.value;
     const password = e.target.password.value;
     const remember = e.target.remember.checked;
