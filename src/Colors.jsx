@@ -1,3 +1,5 @@
+import Color from "./Color";
+
 const Counter = ({items}) => {
 
   return (
@@ -5,7 +7,7 @@ const Counter = ({items}) => {
       <ul>
         {
           items.map(item => {
-            return <li key={item.id}>{item.name}</li>
+            return <Color key={item.id} color={item.name}/>
           })
         }
       </ul>
