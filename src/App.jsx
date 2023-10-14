@@ -1,16 +1,10 @@
-import Login from "./Login"
-import UncontrolledLogin from "./UncontrolledLogin"
+import FocusableInput from "./FocusableInput";
 
 const App = () => {
-  const onLogin = (e, data) => {
-    e.preventDefault();
-    console.log('data', data)
-  }
 
   return (
     <>
-      <Login event={onLogin} />
-      <UncontrolledLogin />
+      <FocusableInput />
     </>
   )
 }
