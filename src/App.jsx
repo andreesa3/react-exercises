@@ -1,9 +1,9 @@
-import TodoList from "./TodoList";
+import Welcome from "./Welcome";
 
 const App = () => {
   return (
     <>
-      <TodoList />
+      <Welcome />
     </>
   )
 }
