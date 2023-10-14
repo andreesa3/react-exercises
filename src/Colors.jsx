@@ -1,4 +1,4 @@
-const Counter = ({items}) => {
+const Colors = ({items}) => {
 
   return (
     <>
@@ -13,4 +13,4 @@ const Counter = ({items}) => {
   )
 }
 
-export default Counter;
+export default Colors;
