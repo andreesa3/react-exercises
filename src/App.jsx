@@ -1,10 +1,10 @@
-import FocusableInput from "./FocusableInput";
+import Counter from "./Counter";
 
 const App = () => {
 
   return (
     <>
-      <FocusableInput />
+      <Counter initialValue={0}/>
     </>
   )
 }
