@@ -1,9 +1,9 @@
-import Welcome from "./Welcome";
+import Counter from "./Counter";
 
 const App = () => {
   return (
     <>
-      <Welcome />
+      <Counter />
     </>
   )
 }
