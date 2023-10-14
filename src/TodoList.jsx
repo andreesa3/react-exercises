@@ -2,7 +2,6 @@ import { useState } from "react";
 
 const TodoList = () => {
   const [todo, setTodo] = useState('')
-
   const [items, setItems] = useState([])
 
   const handleInput = (e) => {
@@ -19,6 +18,10 @@ const TodoList = () => {
     setTodo('');
   }
 
+  const removeTodo = (index) => {
+    setItems(prevArr => prevArr.filter((item, i) => i !== index));
+  }
+
   const resetList = () => {
     setItems([]);
   }
@@ -30,7 +33,14 @@ const TodoList = () => {
       <button onClick={addTodo}>Add</button>
       <button onClick={resetList}>Reset</button>
       {
-        items.map(item => <li>{item}</li>)
+        items.map((item, index) => {
+          return (
+            <li key={index}>
+              {item}
+              <button onClick={() => removeTodo(index)}>Remove</button>
+            </li>
+          )
+        })
       }
     </>
   )
