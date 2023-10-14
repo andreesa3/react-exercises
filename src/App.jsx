@@ -1,10 +1,23 @@
-import Counter from "./Counter";
+import Colors from "./Colors";
 
 const App = () => {
 
+  const colors = [
+    "red",
+    "blue",
+    "green",
+    "yellow",
+    "purple",
+    "orange",
+    "pink",
+    "brown",
+    "black",
+    "white"
+  ];
+  
   return (
     <>
-      <Counter initialValue={0}/>
+      <Colors items={colors}/>
     </>
   )
 }
