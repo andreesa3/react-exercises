@@ -1,9 +1,10 @@
-import TodoList from "./TodoList";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FocusableInput from "./FocusableInput";
 
 const App = () => {
   return (
     <>
-      <TodoList />
+      <FocusableInput />
     </>
   )
 }
