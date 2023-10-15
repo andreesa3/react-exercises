@@ -1,14 +1,9 @@
-import Login from "./Login";
-
-const onLogin = (e, data) => {
-  e.preventDefault();
-  console.log(data)
-}
+import Clock from "./Clock";
 
 const App = () => {
   return (
     <>
-      <Login event={onLogin}/>
+      <Clock />
     </>
   )
 }
