@@ -1,5 +1,3 @@
-import './index.css'
-
 const Welcome = () => {
   // Se non impostiamo nulla come valore predefinito non verrà mandato nulla a schermo poiché undefined
   return (
