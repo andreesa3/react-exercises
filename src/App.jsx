@@ -1,9 +1,9 @@
-import Clock from "./Clock";
+import TodoList from "./TodoList";
 
 const App = () => {
   return (
     <>
-      <Clock />
+      <TodoList />
     </>
   )
 }
