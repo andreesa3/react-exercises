@@ -1,6 +1,6 @@
 import btnImage from './icons/black-next.svg'
 
-export default function Counter() {
+const MouseClicker = () => {
   const printName = (e) => {
     {/* Avendo tolto currentTarget da questa funzione, 
     stiamo evitando che al click del pulsante venga 
@@ -21,3 +21,5 @@ export default function Counter() {
     </>
   )
 }
+
+export default MouseClicker;
