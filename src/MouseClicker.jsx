@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-
-export default function Counter() {
+const MouseClicker = () => {
   const printName = (e) => {
     console.log(e.target.name);
   }
@@ -11,3 +9,5 @@ export default function Counter() {
     </>
   )
 }
+
+export default MouseClicker;
