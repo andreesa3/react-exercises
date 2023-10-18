@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Welcome from "./Welcome";
 
-export default function InteractiveWelcome () {
+const InteractiveWelcome = () => {
   const [name, setName] = useState('');
 
   const handleNameInput = (e) => {
@@ -15,3 +15,5 @@ export default function InteractiveWelcome () {
     </>
   )
 }
+
+export default InteractiveWelcome;
