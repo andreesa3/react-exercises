@@ -4,15 +4,15 @@ import CounterDisplay from "./CounterDisplay";
 const Counter = () => {
   const [counter, setCounter] = useState(0);
 
-  const increment = () => {
-    return setCounter(counter => counter + 1);
+ const increment = () => {
+    return setCounter(counter + 1);
   }
   const decrement = () => {
-    return setCounter(counter => counter - 1);
+    return setCounter(counter - 1);
   };
 
   const reset = () => {
-    return setCounter(counter => counter = 0);
+    return setCounter(0);
   };
 
   return (
