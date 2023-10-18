@@ -23,7 +23,7 @@ const Clock = ({}) => {
 
   return (
     <>
-      <h3 className="text-2xl font-extrabold text-center">{language === "en" ? 'Clock' : language === 'it' ? 'Orologio' : 'Wanduhr'}</h3>
+      <h3 className="text-2xl font-extrabold text-center">{language === "en" ? 'Current time' : language === 'it' ? 'Ora Corrente' : 'Aktuelle Uhrzeit'}</h3>
       <p className="text-xl text-center">{time}</p>
     </>
   )
