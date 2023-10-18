@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Counter() {
+export default function Clock() {
   const [time, setTime] = useState('');
 
   const currentTime = () => {
