@@ -4,7 +4,7 @@ import Clock from './Clock';
 import { useState } from "react";
 
 const App = () => {
-  const [language, setLanguage] = useState('en');
+  const [language, setLanguage] = useState('it');
 
   const handleLanguageSelector = (e) => {
     setLanguage(e.target.value)
