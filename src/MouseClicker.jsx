@@ -1,6 +1,6 @@
 import btnImage from './icons/black-next.svg'
 
-export default function Counter() {
+const MouseClicker = () => {
   const printName = (e) => {
     console.log(e.currentTarget.name);
   }
@@ -19,3 +19,5 @@ export default function Counter() {
     </>
   )
 }
+
+export default MouseClicker;
