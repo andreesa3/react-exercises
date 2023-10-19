@@ -1,35 +1,13 @@
-import LanguageContext from "./LanguageContext";
-import Container from "./Container";
-import Clock from './Clock';
+import GithubUser from "./GithubUser";
 import { useState } from "react";
 
 const App = () => {
-  const [language, setLanguage] = useState('it');
 
-  const handleLanguageSelector = (e) => {
-    setLanguage(e.target.value)
-  }
-
+  const [username, setUsername] = useState('');
 
   return (
     <>
-      <div>
-        <select name="languageSelector" id="" onChange={handleLanguageSelector}>
-          <option value="it">IT</option>
-          <option value="en">EN</option>
-          <option value="de">DE</option>
-        </select>
-        <Container title={<h1 className="text-3xl font-extrabold border-b-2 mb-4 py-2">My Blog</h1>}>
-
-          {/* Il componente Clock se non è racchiuso nel LanguageContext component non ha piû accesso 
-          ai dati di quest'ultimo, infatti, mostra il testo e l'ora ma 
-          non è possibile cambiare la lingua */}
-
-          {/* <LanguageContext.Provider value={language}> */}
-          <Clock />
-          {/* </LanguageContext.Provider> */}
-        </Container>
-      </div>
+      <GithubUser username={username} setUsername={setUsername} />
     </>
   )
 }
