@@ -41,7 +41,7 @@ const GithubUsers = ({ username, setUsername }) => {
           <input type="text" className="border-2 block p-1 mt-2" name="username" value={username} onChange={handleUsername} placeholder="andreesa3" />
           <button className="border py-1 px-4 my-3 bg-black text-white hover:bg-gray-800" type="submit">Invia</button>
         </form>
-        <ul className="flex justify-center flex-wrap gap-10">
+        <ul className="flex flex-wrap gap-10">
           {
             data && (
               usersList.map((item, index) => {
