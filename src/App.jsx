@@ -1,13 +1,10 @@
-import GithubUsers from "./GithubUsers";
-import { useState } from "react";
+import Counter from "./Counter";
 
 const App = () => {
 
-  const [username, setUsername] = useState('');
-
   return (
     <>
-      <GithubUsers username={username} setUsername={setUsername} />
+      <Counter />
     </>
   )
 }
