@@ -1,4 +1,4 @@
-import GithubUser from "./GithubUser";
+import GithubUsers from "./GithubUsers";
 import { useState } from "react";
 
 const App = () => {
@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <>
-      <GithubUser username={username} setUsername={setUsername} />
+      <GithubUsers username={username} setUsername={setUsername} />
     </>
   )
 }
