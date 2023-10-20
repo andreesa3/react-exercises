@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const GithubUser = ({ username }) => {
   const API_URL = `https://api.github.com/users/${username}`
