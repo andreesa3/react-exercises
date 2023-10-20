@@ -1,10 +1,10 @@
-import Counter from "./Counter";
+import ControlledForm from "./ControlledForm";
 
 const App = () => {
 
   return (
     <>
-      <Counter />
+      <ControlledForm />
     </>
   )
 }
