@@ -1,10 +1,10 @@
-import ControlledForm from "./ControlledForm";
+import GithubUser from "./GithubUser";
 
 const App = () => {
 
   return (
     <>
-      <ControlledForm />
+      <GithubUser username={'andreesa3'} />
     </>
   )
 }
