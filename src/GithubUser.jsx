@@ -16,7 +16,7 @@ const GithubUser = ({ username }) => {
       }
     }
     fetchData();
-  })
+  }, [])
 
   return (
     <div className="p-4">
