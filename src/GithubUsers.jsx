@@ -2,34 +2,18 @@ import { useState } from "react";
 import GithubUser from "./GithubUser";
 
 const GithubUsers = ({ username, setUsername }) => {
-  const API_URL = `https://api.github.com/users/${username}`
-
-
-  const [data, setData] = useState(null);
   const [usersList, setUsersList] = useState([]);
 
   const handleUsername = (e) => {
     setUsername(e.target.value)
   }
 
-  const fetchData = async () => {
-    try {
-      const existingUser = usersList.find(item => item.login === username);
-      if (!existingUser) {
-        const response = await fetch(API_URL);
-        const result = await response.json();
-        setData(result);
-        setUsersList(d => [...d, result]);
-      }
-    } catch (error) {
-      console.error(error.message);
-    }
-  }
-
   const handleSubmitForm = async (e) => {
     e.preventDefault();
-    await fetchData();
-    console.log(newArr)
+    const existingUser = usersList.find(item => item === username);
+    if (!existingUser) {
+      setUsersList(d => [...d, username]);
+    }
     setUsername('');
   }
 
@@ -43,9 +27,9 @@ const GithubUsers = ({ username, setUsername }) => {
         </form>
         <ul className="flex flex-wrap gap-10">
           {
-            data && (
+            usersList.length > 0 && (
               usersList.map((item, index) => {
-                return <li key={index}><GithubUser obj={item} /></li>
+                return <li key={index}><GithubUser username={item} /></li>
               })
             )
           }
