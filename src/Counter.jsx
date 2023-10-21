@@ -1,6 +1,5 @@
-import useCounter from "./useCounter"; 
+import useCounter from './useCounter'
 
-// Usare il custom hook in un componente
 const Counter = () => {
   const { count, increment, decrement, reset } = useCounter(0);
 
