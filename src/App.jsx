@@ -1,10 +1,10 @@
-import GithubUser from "./GithubUser";
+import CurrentLocation from "./CurrentLocation";
 
 const App = () => {
 
   return (
     <>
-      <GithubUser username={'andreesa3'} />
+      <CurrentLocation />
     </>
   )
 }
