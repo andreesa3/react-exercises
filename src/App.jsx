@@ -7,7 +7,7 @@ import Welcome from "./pages/Welcome";
 const App = () => {
   return (
     <>
-      <nav>
+      <nav style={{display: 'flex', alignItems: 'center', gap: '1rem'}}>
         <Link to='/'>Home</Link>
         <Link to='/counter'>Counter</Link>
         <Link to='/users/andreesa3'>GithubUser</Link>

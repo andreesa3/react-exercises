@@ -22,10 +22,10 @@ const GithubUser = ({ username }) => {
     <div className="p-4">
       {
         data && (
-          <div className="mt-5 bg-gray-300 p-5 max-w-max">
-            <img className="h-52" src={data.avatar_url} alt="user avatar" />
-            <p className="pt-1 font-extrabold italic">{data.login}</p>
-            <p className="text-2xl">{data.name}</p>
+          <div style={{marginTop: '1.5rem'}}>
+            <img style={{height: '10rem'}} src={data.avatar_url} alt="user avatar" />
+            <p>{data.login}</p>
+            <p>{data.name}</p>
           </div>
         )
       }
