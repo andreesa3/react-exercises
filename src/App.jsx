@@ -13,10 +13,10 @@ const App = () => {
         <Link to='/users/andreesa3'>GithubUser</Link>
       </nav>
       <Routes>
-        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Welcome name="User" />} />
         <Route path="/counter" element={<Counter />} />
         <Route path="users/:username" element={<ShowGithubUser />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
