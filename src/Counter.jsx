@@ -4,24 +4,33 @@ const Counter = () => {
   const [counter, setCounter] = useState(0);
 
   const addOne = () => {
-    // Inseriamo un valore immediato se vogliamo fare un'operazione semplice come addizione, sottrazione, ecc...
-    // setCounter(counter + 1)
-    // Usiamo la funzione quando vogliamo fare delle operazioni più complesse
-    // setCounter(counter => {
-    //   if (counter < 10) {
-    //     return counter + 1;
-    //   } else {
-    //     return counter = 0;
-    //   }
-    // })
+
+    /* Quando passiamo una funzione, React garantisce che gli aggiornamenti vengano applicati
+     correttamente, anche se ce ne sono di più in modo simultaneo. Garantisce che gli aggiornamenti 
+     vengano applicati nell'ordine in cui sono stati chiamati e che le transizioni di stato siano coerenti. */
+
+    // setCounter(c => c + 1);
+
+    /* Quando passiamo un valore diretto, React non fornisce le stesse garanzie e potremmo riscontrare
+    comportamenti imprevisti quando ci sono più aggiornamento in un breve intervallo di tempo. */
+    
+    // setCounter(counter + 1);
+    
   }
 
   return (
-    <>  
-      <h2>{counter}</h2>
-      <button onClick={addOne}>Click</button>
+    <>
+      <h1>Counter: {counter}</h1>
+      <button onClick={() => {
+        addOne();
+        addOne();
+        addOne();
+      }}>+3</button>
+      <button onClick={() => {
+        addOne();
+      }}>+1</button>
     </>
-  )
+  );
 }
 
 export default Counter;
