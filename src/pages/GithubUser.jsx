@@ -2,10 +2,11 @@ import useGithubUser from "../hooks/useGithubUser";
 
 const GithubUser = ({ username }) => {
   const API_URL = `https://api.github.com/users/${username}`
-  const { data, error, isLoading } = useGithubUser(API_URL, username)
+  const { data, error, isLoading, handleRefresh } = useGithubUser(API_URL, username)
 
   return (
     <div className="p-4">
+      <button onClick={handleRefresh}>Refresh</button>
       {isLoading && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
       {
