@@ -18,7 +18,7 @@ const useGithubUser = (username) => {
     fetchData();
   }, [username]);
 
-  return data;
+  return { data };
 };
 
 export default useGithubUser;

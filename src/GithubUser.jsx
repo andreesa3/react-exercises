@@ -1,7 +1,7 @@
 import useGithubUser from "./useGithubUser";
 
 const GithubUser = ({ username }) => {
-  const data = useGithubUser(username);
+  const { data } = useGithubUser(username);
 
   return (
     <div className="p-4">
