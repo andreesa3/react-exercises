@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const useFetch = (API_URL) => {
+const useGithubUser = (API_URL) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false)
@@ -25,4 +25,4 @@ const useFetch = (API_URL) => {
 
 }
 
-export default useFetch;
+export default useGithubUser;

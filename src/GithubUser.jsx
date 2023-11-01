@@ -1,9 +1,9 @@
-import useFetch from "./useFetch";
+import useGithubUser from "./useGithubUser";
 
 const GithubUser = ({ username }) => {
   const API_URL = `https://api.github.com/users/${username}`
 
-  const { data, error, loading, fetchData } = useFetch(API_URL)
+  const { data, error, loading, fetchData } = useGithubUser(API_URL)
 
   return (
     <div className="p-4">
