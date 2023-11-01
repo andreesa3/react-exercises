@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (username) => {
+const useGithubUser = (username) => {
   const API_URL = `https://api.github.com/users/${username}`;
   const [data, setData] = useState(null);
 
@@ -21,4 +21,4 @@ const useFetch = (username) => {
   return data;
 };
 
-export default useFetch;
+export default useGithubUser;

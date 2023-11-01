@@ -1,7 +1,7 @@
-import useFetch from "./useFetch";
+import useGithubUser from "./useGithubUser";
 
 const GithubUser = ({ username }) => {
-  const data = useFetch(username);
+  const data = useGithubUser(username);
 
   return (
     <div className="p-4">
