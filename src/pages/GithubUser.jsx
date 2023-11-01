@@ -1,22 +1,8 @@
-import { useState, useEffect } from "react";
+import useGithubUser from "../hooks/useGithubUser";
 
 const GithubUser = ({username}) => {
   const API_URL = `https://api.github.com/users/${username}`
-
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(API_URL);
-        const result = await response.json();
-        setData(result);
-      } catch (error) {
-        console.error(error.message);
-      }
-    }
-    fetchData();
-  }, [API_URL])
+  const {data, error, loading} = useGithubUser(API_URL)
 
   return (
     <div className="p-4">
