@@ -1,11 +1,13 @@
 import useGithubUser from "../hooks/useGithubUser";
 
-const GithubUser = ({username}) => {
+const GithubUser = ({ username }) => {
   const API_URL = `https://api.github.com/users/${username}`
-  const {data, error, loading} = useGithubUser(API_URL)
+  const { data, error, isLoading } = useGithubUser(API_URL)
 
   return (
     <div className="p-4">
+      {isLoading && <h2>Loading...</h2>}
+      {error && <h2>{error}</h2>}
       {
         data && (
           <div style={{ marginTop: '1.5rem' }}>
