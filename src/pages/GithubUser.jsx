@@ -2,7 +2,7 @@ import useGithubUser from "../hooks/useGithubUser";
 
 const GithubUser = ({ username }) => {
   const API_URL = `https://api.github.com/users/${username}`
-  const { data, error, isLoading } = useGithubUser(API_URL)
+  const { data, error, isLoading } = useGithubUser(API_URL, username)
 
   return (
     <div className="p-4">

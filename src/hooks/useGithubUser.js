@@ -1,11 +1,14 @@
 import useSWR from 'swr'
 
-const useGithubUser = (API_URL) => {
+const useGithubUser = (API_URL, username) => {
   const fetcher = (url) => fetch(url).then(res => res.json());
-  const { data, error, isLoading } = useSWR(API_URL, fetcher)
 
+  if (username) {
+    const { data, error, isLoading } = useSWR(API_URL, fetcher)
+    return { data, error, isLoading }
+  }
 
-  return { data, error, isLoading }
+  return { data: null, error: null, isLoading: false }
 
 }
 
